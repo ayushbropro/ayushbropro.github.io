@@ -11,7 +11,7 @@
 <style>
 :root{
   --bg:#0a0a0c; --panel:#121216; --line:#232329;
-  --red:#e8222a; --red-dk:#8f1218;
+  --red:#2456c4; --red-dk:#102b70;
   --white:#f4f3ef; --muted:#8d8d96;
   --anton:'Anton',sans-serif; --arch:'Archivo',sans-serif; --script:'Caveat',cursive;
 }
@@ -29,10 +29,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* ---------- cursor ---------- */
 .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:200;border-radius:50%;transform:translate(-50%,-50%);display:none}
 .cursor-dot{width:8px;height:8px;background:var(--red)}
-.cursor-ring{width:38px;height:38px;border:1.5px solid rgba(232,34,42,.6);transition:width .25s,height .25s,border-color .25s,background .25s}
+.cursor-ring{width:38px;height:38px;border:1.5px solid rgba(36,86,196,.6);transition:width .25s,height .25s,border-color .25s,background .25s}
 body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 body.has-cursor .cursor-dot,body.has-cursor .cursor-ring{display:block}
-.cursor-ring.grow{width:64px;height:64px;background:rgba(232,34,42,.12);border-color:var(--red)}
+.cursor-ring.grow{width:64px;height:64px;background:rgba(36,86,196,.12);border-color:var(--red)}
 
 /* ---------- nav ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
@@ -61,7 +61,7 @@ font-family:var(--anton);font-size:33vw;line-height:1;color:var(--red);z-index:1
 .hero-giant .ch{display:inline-block;transform:translateY(110%);animation:chUp .9s cubic-bezier(.22,1,.36,1) forwards}
 @keyframes chUp{to{transform:translateY(0)}}
 .hero-portrait{position:absolute;bottom:0;left:50%;transform:translateX(-50%);z-index:2;height:66svh;
-filter:drop-shadow(0 0 60px rgba(232,34,42,.22));opacity:0;animation:fadeUp 1.1s .5s cubic-bezier(.22,1,.36,1) forwards}
+filter:drop-shadow(0 0 60px rgba(36,86,196,.22));opacity:0;animation:fadeUp 1.1s .5s cubic-bezier(.22,1,.36,1) forwards}
 .hero-portrait img{height:100%;width:auto}
 @keyframes fadeUp{from{opacity:0;transform:translateX(-50%) translateY(50px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 .hero-fg{position:absolute;bottom:6svh;left:50%;transform:translateX(-50%);z-index:3;text-align:center;width:100%;pointer-events:none;
@@ -87,7 +87,7 @@ color:var(--muted);text-transform:uppercase;display:none;align-items:center;gap:
 .stat small{display:block;margin-top:4px;font-size:9px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
 .loc{margin-top:22px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
 .loc i{width:8px;height:8px;background:var(--red);border-radius:50%;display:inline-block;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,34,42,.5)}50%{box-shadow:0 0 0 7px rgba(232,34,42,0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(36,86,196,.5)}50%{box-shadow:0 0 0 7px rgba(36,86,196,0)}}
 @media(min-width:900px){
   .hero{height:100svh}
   .hero-giant{font-size:23vw;top:7svh}
@@ -134,8 +134,8 @@ color:transparent;-webkit-text-stroke:1px #1e1e24;z-index:0;pointer-events:none;
 display:flex;flex-direction:column;justify-content:flex-end;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s}
 .work-card:hover{transform:translateY(-8px);border-color:var(--red)}
 .work-card .big-bg{position:absolute;top:-30px;right:-16px;font-family:var(--anton);font-size:200px;line-height:1;color:transparent;
--webkit-text-stroke:1.5px rgba(232,34,42,.28);pointer-events:none}
-.work-card .glow{position:absolute;top:-70px;left:-70px;width:240px;height:240px;background:radial-gradient(circle,rgba(232,34,42,.25),transparent 70%);pointer-events:none}
+-webkit-text-stroke:1.5px rgba(36,86,196,.28);pointer-events:none}
+.work-card .glow{position:absolute;top:-70px;left:-70px;width:240px;height:240px;background:radial-gradient(circle,rgba(36,86,196,.25),transparent 70%);pointer-events:none}
 .work-idx{font-family:var(--anton);color:var(--red);font-size:44px;line-height:1}
 .work-name{font-family:var(--anton);font-size:clamp(26px,3.4vw,38px);text-transform:uppercase;margin:14px 0 8px;line-height:1.05}
 .work-meta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
@@ -227,13 +227,13 @@ footer .fname span{color:var(--red)}
 .fxc{position:fixed;left:0;top:0;z-index:9995;pointer-events:none;will-change:transform}
 .fxc .ptr{display:block}
 .fxc-tag{position:absolute;left:19px;top:14px;font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;letter-spacing:.12em;padding:5px 9px;border-radius:99px;white-space:nowrap}
-.fx-s0 .fxc-tag{background:#e8232a;color:#fff}
+.fx-s0 .fxc-tag{background:#2456c4;color:#fff}
 .fx-s1 .fxc-tag{background:#f2f2f2;color:#0d0d0f}
-.fx-s2 .fxc-tag{background:#1c1c20;color:#fff;box-shadow:inset 0 0 0 1px #e8232a}
-.fx-hot{outline:2px solid #e8232a !important;outline-offset:5px}
-.fx-ripple{position:fixed;z-index:9994;pointer-events:none;width:72px;height:72px;border:2px solid #e8232a;border-radius:50%;animation:fxr .7s ease-out forwards}
+.fx-s2 .fxc-tag{background:#1c1c20;color:#fff;box-shadow:inset 0 0 0 1px #2456c4}
+.fx-hot{outline:2px solid #2456c4 !important;outline-offset:5px}
+.fx-ripple{position:fixed;z-index:9994;pointer-events:none;width:72px;height:72px;border:2px solid #2456c4;border-radius:50%;animation:fxr .7s ease-out forwards}
 @keyframes fxr{from{transform:translate(-50%,-50%) scale(.15);opacity:1}to{transform:translate(-50%,-50%) scale(1);opacity:0}}
-.fx-select{position:fixed;z-index:9993;pointer-events:none;border:1.5px solid #e8232a;background:rgba(232,34,42,.05);opacity:0}
+.fx-select{position:fixed;z-index:9993;pointer-events:none;border:1.5px solid #2456c4;background:rgba(36,86,196,.05);opacity:0}
 .fx-hide{opacity:0 !important;transform:scale(.96)}
 .fx-show{opacity:1 !important;transform:none !important;transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
 </style>
@@ -242,8 +242,14 @@ footer .fname span{color:var(--red)}
 .hero-marquee{position:absolute;left:0;right:0;top:44%;transform:translateY(-50%);z-index:1;overflow:hidden;pointer-events:none;user-select:none}
 .hm-track{display:flex;width:max-content;animation:hmm 22s linear infinite}
 .hm-track span{font-family:var(--anton);font-size:clamp(56px,10vw,170px);line-height:1.1;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.30);padding-right:28px}
-.hm-track span i{font-style:normal;color:#e8232a;-webkit-text-stroke:0;padding-right:28px}
+.hm-track span i{font-style:normal;color:#2456c4;-webkit-text-stroke:0;padding-right:28px}
 @keyframes hmm{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+</style>
+<style>
+.nav-actions{display:flex;align-items:center;gap:22px}.social-icons{display:flex;align-items:center;gap:4px}.social-icons a{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;color:var(--white);border-radius:50%;transition:background .25s,color .25s}.social-icons a:hover,.social-icons a:focus-visible{background:var(--red);color:white;outline:2px solid white;outline-offset:2px}.social-icons svg{width:22px;height:22px}.social-icons a:last-child{color:#7195ef}.social-icons a:last-child:hover{color:white}footer .social-icons{margin:8px 0 2px}footer .social-icons a{border:1px solid var(--line)}
+.closing-punch{padding:50px 6vw 110px;text-align:center;border-top:1px solid var(--line)}.punch-kicker{font-family:var(--script);font-size:clamp(28px,4vw,46px);color:var(--white);display:block;margin:15px 0 22px}.closing-punch p{font-family:var(--anton);font-size:clamp(42px,8.5vw,120px);line-height:1.05;text-transform:uppercase;color:var(--red);letter-spacing:-.01em}.closing-punch p span{font-style:italic}
+@media(max-width:899px){nav{padding:12px 18px}.nav-actions{gap:8px}.nav-cta{padding:10px 12px;font-size:10px;letter-spacing:.08em}.social-icons{gap:0}.closing-punch{padding:42px 24px 70px}}
+@media(max-width:359px){nav .nav-cta{display:none}}
 </style>
 </head>
 <body>
@@ -261,7 +267,7 @@ footer .fname span{color:var(--red)}
     <a href="#journey">Journey</a>
     <a href="#contact">Contact</a>
   </div>
-  <a class="btn-red nav-cta" href="#contact"><span>Let's Talk</span></a>
+  <div class="nav-actions"><div class="social-icons"><a href="https://www.instagram.com/i_am_pro_human?mdxt=N2drdDE4b2Yxd251" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/1CdCbkWtaK/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 22v-9h3l.5-3.5H14V7.3c0-1 .3-1.7 1.8-1.7h1.9V2.5c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.5 1.6-4.5 4.6v2.6H7.5V13h3v9z"/></svg></a><a href="https://www.instagram.com/i_am_pro_human_artist?vrfl=cGxoenNmbnBhYmdj" target="_blank" rel="noopener noreferrer" aria-label="Instagram Art" title="Instagram Art"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/><path d="m14 20 6-6 2 2-6 6-3 1z" fill="var(--bg)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></a></div><a class="btn-red nav-cta" href="#contact"><span>Let's Talk</span></a></div>
 </nav>
 
 <header class="hero" id="top">
@@ -279,21 +285,11 @@ footer .fname span{color:var(--red)}
       <a class="btn-red" href="#work"><span>See My Work &darr;</span></a>
       <div class="loc"><i></i> Sundargarh, Odisha, India</div>
     </div>
-    <div class="hero-side hero-side-r">
-      <div class="stat"><b>9.0</b><small>CGPA &middot; First Year</small></div>
-      <div class="stat"><b>87.8%</b><small>Class XII</small></div>
-      <div class="stat"><b>90.4%</b><small>Class X</small></div>
-    </div>
     <div class="hero-scroll">Scroll to explore <span class="arr">&darr;</span></div>
   </div>
   <div class="hero-mobile-meta">
     <p>First-year B.Tech Electrical Engineering student at IGIT Sarang, exploring how AI can make electrical systems smarter and more efficient.</p>
     <a class="btn-red" href="#work"><span>See My Work &darr;</span></a>
-    <div class="stats-row">
-      <div class="stat"><b>9.0</b><small>CGPA &middot; 1st Yr</small></div>
-      <div class="stat"><b>87.8%</b><small>Class XII</small></div>
-      <div class="stat"><b>90.4%</b><small>Class X</small></div>
-    </div>
     <div class="loc"><i></i> Sundargarh, Odisha, India</div>
   </div>
 </header>
@@ -415,12 +411,15 @@ footer .fname span{color:var(--red)}
   <a class="btn-red" href="mailto:amritayush971@gmail.com" data-reveal><span>Say Hello</span></a>
 </section>
 
+<div class="closing-punch" data-reveal><span class="punch-kicker">Keep going.</span><p>Failure is just<br>the start of <span>success.</span></p></div>
+
 <footer>
   <div class="top">
     <span class="fname">Ayush Amrit Patel<span>.</span></span>
     <span>Sundargarh, Odisha &rarr; the world</span>
     <a href="#top">Back to top &uarr;</a>
   </div>
+  <div class="social-icons"><a href="https://www.instagram.com/i_am_pro_human?mdxt=N2drdDE4b2Yxd251" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/1CdCbkWtaK/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 22v-9h3l.5-3.5H14V7.3c0-1 .3-1.7 1.8-1.7h1.9V2.5c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.5 1.6-4.5 4.6v2.6H7.5V13h3v9z"/></svg></a><a href="https://www.instagram.com/i_am_pro_human_artist?vrfl=cGxoenNmbnBhYmdj" target="_blank" rel="noopener noreferrer" aria-label="Instagram Art" title="Instagram Art"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/><path d="m14 20 6-6 2 2-6 6-3 1z" fill="var(--bg)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></a></div>
   <span>&copy; 2026 Ayush Amrit Patel. Built with current and curiosity.</span>
 </footer>
 
@@ -464,7 +463,7 @@ if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
 (function(){
   var SELS=['.hero-name','.hero-giant','.hero-sub','.hero-side-l .btn-red','.stat','.hero-scroll','#work .sec-title','.work-card','#skills .sec-title','.skill-row','#about .sec-title','.quote-card','.about-photo','.meta-row','#journey .sec-title','.path-row','.contact-title','.contact-row','.badge-wrap'];
   var SELECT_SELS=['#work .sec-title','.work-card:not(.ghost)','#skills .sec-title','.quote-card','.about-photo','#journey .sec-title','.contact-title'];
-  var LABELS=[['AYUSH','fx-s0','#e8232a','#ffffff'],['YOU','fx-s1','#f2f2f2','#0d0d0f'],['GUEST','fx-s2','#232328','#e8232a'],['AI','fx-s0','#e8232a','#ffffff'],['ML','fx-s1','#f2f2f2','#0d0d0f'],['PYTHON','fx-s2','#232328','#e8232a'],['EE','fx-s0','#e8232a','#ffffff'],['DATA','fx-s1','#f2f2f2','#0d0d0f'],['VOLT','fx-s2','#232328','#e8232a'],['AMP','fx-s0','#e8232a','#ffffff'],['OHM','fx-s1','#f2f2f2','#0d0d0f'],['CIRCUIT','fx-s2','#232328','#e8232a']];
+  var LABELS=[['AYUSH','fx-s0','#2456c4','#ffffff'],['YOU','fx-s1','#f2f2f2','#0d0d0f'],['GUEST','fx-s2','#232328','#2456c4'],['AI','fx-s0','#2456c4','#ffffff'],['ML','fx-s1','#f2f2f2','#0d0d0f'],['PYTHON','fx-s2','#232328','#2456c4'],['EE','fx-s0','#2456c4','#ffffff'],['DATA','fx-s1','#f2f2f2','#0d0d0f'],['VOLT','fx-s2','#232328','#2456c4'],['AMP','fx-s0','#2456c4','#ffffff'],['OHM','fx-s1','#f2f2f2','#0d0d0f'],['CIRCUIT','fx-s2','#232328','#2456c4']];
   var W=window.innerWidth,H=window.innerHeight;
   var pool=[]; SELS.forEach(function(s){document.querySelectorAll(s).forEach(function(el){if(pool.indexOf(el)<0)pool.push(el)})});
   function mkc(cls,label,fill,stroke){
